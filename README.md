@@ -1,4 +1,5 @@
-# vue-seed
+# Vue Frontend
+Super cool Frontend for the Hackathon 2019
 
 ## Project setup
 ```
@@ -24,6 +25,3 @@ npm run test
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

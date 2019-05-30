@@ -7,6 +7,5 @@
 <script lang="ts" src="./App.ts">
 </script>
 
-
 <style scoped lang="scss">
 </style>
