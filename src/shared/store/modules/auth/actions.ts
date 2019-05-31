@@ -11,7 +11,10 @@ export const actions: ActionTree<AuthState, RootState> = {
     try {
       // authenticate to get the access token
       const response = await defaultBackendAuthorization.authenticate(payload.username!, payload.password!);
+      const userToken = response.headers.authorization;
+      commit('userToken', userToken);
     } catch (e) {
+      console.log(e);
     }
   },
 };
