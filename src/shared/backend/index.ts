@@ -5,7 +5,6 @@ export const instance = axios.create({
 });
 
 export enum URLS {
-  authenticate = '/authenticate',
-  invoice = '/invoice',
+  invoice = '/upload',
 }
 
