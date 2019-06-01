@@ -3,6 +3,7 @@ import App from './views/App/App.vue';
 import router from './router';
 import store from './shared/store/index';
 
+
 new Vue({
   router,
   store,
