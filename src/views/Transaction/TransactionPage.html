@@ -39,7 +39,7 @@
                     <v-flex xs6>
                         <v-card>
                             <img
-                                    src="@/assets/CreditCard.png"
+                                    src="@/assets/creditcard.png"
                                     height="34px"
                                     width="34px"/>
                             <v-card-actions>
@@ -64,14 +64,14 @@
             </v-layout>
             <v-layout row wrap>
                 <v-text-field clearable v-model="invoice.iban"
-                              name="iban" label="IBan"></v-text-field>
+                              name="iban" label="IBAN"></v-text-field>
             </v-layout>
             <v-layout row wrap>
                 <v-text-field clearable v-model="invoice.usage"
                               name="usage" label="Verwendungszweck"></v-text-field>
             </v-layout>
             <v-layout row wrap>
-                <v-text-field clearable v-money="money" v-model.lazy="invoice.amount" type="numbers"
+                <v-text-field clearable v-money="money" v-model.lazy="invoice.amount" type="tel"
                               name="amount" label="Betrag"></v-text-field>
             </v-layout>
             <div xs12 class="pa-3">
