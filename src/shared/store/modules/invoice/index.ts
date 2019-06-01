@@ -8,7 +8,7 @@ import { state } from './state';
 
 const namespaced: boolean = true;
 
-export const auth: Module<AuthState, RootState> = {
+export const invoice: Module<AuthState, RootState> = {
     namespaced,
     state,
     getters,

@@ -1,16 +1,16 @@
 import {ActionTree} from 'vuex';
 import {AuthState} from './types';
 import {RootState} from '../../types';
-import {defaultBackendAuthorization} from '@/shared/backend/authorization';
-import {defaultBackendInvoice} from '@/shared/backend/invoices';
+import {defaultBackendInvoice} from '../../../backend/invoices';
 
 export const actions: ActionTree<AuthState, RootState> = {
   /**
-   * Login
+   * Create Invoice
+   * Post with base64 image string
    */
   async createInvoice({commit, dispatch}, payload: any) {
     try {
-      return defaultBackendInvoice.createInvoice(payload.image);
+      const result: any = (await defaultBackendInvoice.createInvoice(payload)).data;
     } catch (e) {
       console.log(e);
     }

@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Vuex, {ActionTree, GetterTree, MutationTree, StoreOptions} from 'vuex';
-import {auth} from './modules/auth';
-import {RootState} from '@/shared/store/types';
+import {invoice} from './modules/invoice';
+import {RootState} from './types';
 
 Vue.use(Vuex);
 
@@ -22,7 +22,7 @@ const storeOptions: StoreOptions<RootState> = {
   mutations,
   actions,
   modules: {
-    auth,
+    invoice,
   },
 };
 

@@ -98,9 +98,9 @@
                   fill="#F6C5B0"/>
         </svg>
     </div>
-    <upload-btn color="primary" large title="Foto">
-    </upload-btn>
+
     <div xs12 class="pa-3">
-        <v-btn block color="primary" round dark>Foto</v-btn>
+        <upload-btn class="invoice-upload-button" block color="primary" large ref="uploadButton" title="Foto" @file-update="uploadInvoice" noTitleUpdate>
+        </upload-btn>
     </div>
 </div>
