@@ -56,19 +56,19 @@
                 </v-layout>
             </v-container>
             <v-layout row wrap>
-                <v-text-field clearable v-model="invoice.creditor"
+                <v-text-field clearable v-model="transaction.creditor"
                               name="recipient" label="Empfänger"></v-text-field>
             </v-layout>
             <v-layout row wrap>
-                <v-text-field clearable v-model="invoice.iban"
+                <v-text-field clearable v-model="transaction.iban"
                               name="iban" label="IBAN"></v-text-field>
             </v-layout>
             <v-layout row wrap>
-                <v-text-field clearable v-model="invoice.desc"
+                <v-text-field clearable v-model="transaction.desc"
                               name="description" label="Verwendungszweck"></v-text-field>
             </v-layout>
             <v-layout row wrap>
-                <v-text-field clearable v-money="money" v-model.lazy="invoice.total" type="tel"
+                <v-text-field clearable v-money="money" v-model.lazy="transaction.total" type="tel"
                               name="total" label="Betrag"></v-text-field>
             </v-layout>
             <div xs12 class="pa-3">

@@ -1,10 +1,10 @@
 import {Component, Prop, Vue, Watch} from 'vue-property-decorator';
-import {Invoice} from '../../shared/model/invoice';
-import {invoice} from '../../shared/store/modules/invoice';
+import {Transaction} from '../../shared/model/transaction';
+import {transaction} from '../../shared/store/modules/transaction';
 import {namespace} from 'vuex-class';
 import {VMoney} from 'v-money';
 
-const InvoiceModule = namespace('invoice');
+const TransactionModule = namespace('transaction');
 
 @Component({
   components: {},
@@ -12,12 +12,12 @@ const InvoiceModule = namespace('invoice');
 })
 export default class TransactionPage extends Vue {
 
-  get invoice(): Invoice {
-    return this.stateInvoice;
+  get transaction(): Transaction {
+    return this.stateTransaction;
   }
-  @InvoiceModule.State('invoice') public stateInvoice!: any;
-  @InvoiceModule.Action('setInvoice') public actionSetInvoice!: any;
-  @InvoiceModule.Action('createInvoice') public actionCreateInvoice!: any;
+  @TransactionModule.State('transaction') public stateTransaction!: any;
+  @TransactionModule.Action('setTransaction') public actionSetTransaction!: any;
+  @TransactionModule.Action('createTransaction') public actionCreateTransaction!: any;
 
   public cards = [
     {title: 'Favorite road trips', src: 'https://cdn.vuetifyjs.com/images/cards/road.jpg'},
@@ -25,7 +25,7 @@ export default class TransactionPage extends Vue {
   ];
 
   @Prop(Object)
-  private invoiceInput?: Invoice;
+  private transactionInput?: Transaction;
 
   private money: any = {
     decimal: ',',
@@ -36,7 +36,7 @@ export default class TransactionPage extends Vue {
     masked: false /* doesn't work with directive */};
 
   public routeTransactionConfirm() {
-    this.actionCreateInvoice(this.stateInvoice).then((result: any) => {
+    this.actionCreateTransaction(this.stateTransaction).then((result: any) => {
       this.$router.push({name: 'transactionConfirm'});
     }).catch((error: any) => {
       console.log('Es gab einen Fehler beim Überweisen. Bitte versuchen Sie es erneut');
@@ -44,8 +44,8 @@ export default class TransactionPage extends Vue {
   }
 
   private mounted() {
-    if (this.invoiceInput !== undefined && this.invoiceInput !== null) {
-      this.actionSetInvoice(this.invoiceInput);
+    if (this.transactionInput !== undefined && this.transactionInput !== null) {
+      this.actionSetTransaction(this.transactionInput);
     }
   }
 }

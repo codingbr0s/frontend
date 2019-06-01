@@ -1,13 +1,13 @@
 import {Component, Vue, Watch} from 'vue-property-decorator';
 import {namespace} from 'vuex-class';
 
-const InvoiceModule = namespace('invoice');
+const TransactionModule = namespace('transaction');
 
 @Component({
   components: {},
 })
 export default class App extends Vue {
-  @InvoiceModule.Action('resetInvoice') public actionResetInvoice: any;
+  @TransactionModule.Action('resetTransaction') public actionResetTransaction: any;
 
   public isIndexPage() {
     if (this.$route.path === '/') {
@@ -41,7 +41,7 @@ export default class App extends Vue {
   @Watch('$route')
   private onRouteChange(to: any, from: any) {
     if (from.name === 'transaction') {
-      this.actionResetInvoice();
+      this.actionResetTransaction();
     }
   }
 

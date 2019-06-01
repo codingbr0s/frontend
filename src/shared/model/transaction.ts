@@ -1,4 +1,4 @@
-export interface Invoice {
+export interface Transaction {
   creditor?: string;
   iban: string,
   desc: string
