@@ -6,4 +6,8 @@ import {Component, Vue} from 'vue-property-decorator';
 })
 export default class TransactionConfirmPage extends Vue {
 
+  public routeToUpload() {
+    this.$router.push({name: 'upload'});
+  }
+
 }
