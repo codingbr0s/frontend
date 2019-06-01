@@ -27,6 +27,7 @@ export default new Router({
       path: '/transaction',
       name: 'transaction',
       component: TransactionPage,
+      props: true,
     },
     {
       path: '/transaction-confirm',

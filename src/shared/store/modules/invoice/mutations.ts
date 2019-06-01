@@ -7,7 +7,13 @@ export const mutations: MutationTree<InvoiceState> = {
   setInvoice(state: InvoiceState, payload: Invoice) {
     state.invoice = payload;
   },
-  resetInvoice(state: InvoiceState) {
-    state.invoice = null;
+  resetInvoice(state) {
+    state.invoice = {
+      from: '',
+        to: '',
+        iban: '',
+        usage: '',
+        amount: 0,
+    };
   },
 };

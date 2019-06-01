@@ -9,11 +9,7 @@ export const actions: ActionTree<InvoiceState, RootState> = {
    * Post with base64 image string
    */
   async createInvoice({commit, dispatch}, payload: any) {
-    try {
-      const result: any = (await defaultBackendInvoice.createInvoice(payload)).data;
-    } catch (e) {
-      console.log(e);
-    }
+    return defaultBackendInvoice.createInvoice(payload);
   },
   setInvoice({commit, dispatch}, payload: any) {
     try {
@@ -21,5 +17,8 @@ export const actions: ActionTree<InvoiceState, RootState> = {
     } catch (e) {
       console.log(e);
     }
+  },
+  resetInvoice({commit, dispatch}) {
+    commit('resetInvoice');
   },
 };

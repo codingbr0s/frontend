@@ -1,4 +1,4 @@
-import {Component, Prop, Vue} from 'vue-property-decorator';
+import {Component, Prop, Vue, Watch} from 'vue-property-decorator';
 import {Invoice} from '../../shared/model/invoice';
 import {invoice} from '../../shared/store/modules/invoice';
 import {namespace} from 'vuex-class';
@@ -15,7 +15,8 @@ export default class TransactionPage extends Vue {
   get invoice(): Invoice {
     return this.stateInvoice;
   }
-  @InvoiceModule.State('invoice') public stateInvoice!: Invoice;
+  @InvoiceModule.State('invoice') public stateInvoice!: any;
+  @InvoiceModule.Action('setInvoice') public actionSetInvoice!: any;
 
   public cards = [
     {title: 'Favorite road trips', src: 'https://cdn.vuetifyjs.com/images/cards/road.jpg'},
@@ -39,7 +40,7 @@ export default class TransactionPage extends Vue {
 
   private mounted() {
     if (this.invoiceInput !== undefined && this.invoiceInput !== null) {
-      this.stateInvoice = this.invoiceInput!;
+      this.actionSetInvoice(this.invoiceInput);
     }
   }
 }
