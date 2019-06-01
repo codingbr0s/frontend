@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Vuex, {ActionTree, GetterTree, MutationTree, StoreOptions} from 'vuex';
-import {invoice} from './modules/invoice';
+import {transaction} from './modules/transaction';
 import {RootState} from './types';
 
 Vue.use(Vuex);
@@ -22,7 +22,7 @@ const storeOptions: StoreOptions<RootState> = {
   mutations,
   actions,
   modules: {
-    invoice,
+    transaction,
   },
 };
 
