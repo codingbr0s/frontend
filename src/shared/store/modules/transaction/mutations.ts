@@ -3,8 +3,11 @@ import {TransactionState} from './types';
 import {Payment} from '../../../model/payment';
 
 export const mutations: MutationTree<TransactionState> = {
-  setTransaction(state: TransactionState, payload: Payment) {
+  setPayment(state: TransactionState, payload: Payment) {
     state.payment = payload;
+  },
+  setTransaction(state: TransactionState, payload: any) {
+    state.transaction = payload;
   },
   setExpenses(state: TransactionState, payload: any) {
     state.expenses = payload;

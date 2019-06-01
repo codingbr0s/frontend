@@ -15,7 +15,7 @@ export default class TransactionPage extends Vue {
     return this.statePayment;
   }
   @TransactionModule.State('payment') public statePayment!: any;
-  @TransactionModule.Action('setTransaction') public actionSetPayment!: any;
+  @TransactionModule.Action('setPayment') public actionSetPayment!: any;
   @TransactionModule.Action('createTransaction') public actionCreateTransaction!: any;
 
   public cards = [
