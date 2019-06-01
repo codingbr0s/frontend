@@ -1,13 +1,62 @@
 <div>
     <v-form ref="form">
         <v-flex xs12 class="pa-2">
+            <v-container
+                    fluid
+                    grid-list-md>
+                <v-layout row wrap>
+                    <v-flex xs6>
+                        <v-card>
+                            <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M33.7377 9.05568L17 0.128906L0.262329 9.05568V14.3278H33.7377V9.05568ZM2.26233 10.2557L17 2.39557L31.7377 10.2557V12.3278H2.26233V10.2557ZM3.40987 27.0163V15.4754H5.40987V27.0163H3.40987ZM30.5902 27.0163H33.7377V33.2131H0.262329V27.0163H3.40987V29.0163H2.26233V31.2131H31.7377V29.0163H30.5902V27.0163ZM28.5902 27.0163V15.4754H30.5902V27.0163H28.5902ZM22.1968 27.0163H28.5902V29.0163H22.1968V27.0163ZM20.1968 27.0163V15.4754H22.1968V27.0163H20.1968ZM13.8033 27.0163H20.1968V29.0163H13.8033V27.0163ZM13.8033 27.0163H11.8033V15.4754H13.8033V27.0163ZM11.8033 27.0163V29.0163H5.40987V27.0163H11.8033ZM17 11.1803C15.2889 11.1803 13.9017 9.79309 13.9017 8.08191C13.9017 6.37073 15.2889 4.98355 17 4.98355C18.7112 4.98355 20.0984 6.37073 20.0984 8.08191C20.0984 9.79309 18.7112 11.1803 17 11.1803ZM18.0984 8.08191C18.0984 8.68852 17.6066 9.18027 17 9.18027C16.3934 9.18027 15.9017 8.68852 15.9017 8.08191C15.9017 7.4753 16.3934 6.98355 17 6.98355C17.6066 6.98355 18.0984 7.4753 18.0984 8.08191Z" fill="#BFBFBF"/>
+                                <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="34" height="34">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M33.7377 9.05568L17 0.128906L0.262329 9.05568V14.3278H33.7377V9.05568ZM2.26233 10.2557L17 2.39557L31.7377 10.2557V12.3278H2.26233V10.2557ZM3.40987 27.0163V15.4754H5.40987V27.0163H3.40987ZM30.5902 27.0163H33.7377V33.2131H0.262329V27.0163H3.40987V29.0163H2.26233V31.2131H31.7377V29.0163H30.5902V27.0163ZM28.5902 27.0163V15.4754H30.5902V27.0163H28.5902ZM22.1968 27.0163H28.5902V29.0163H22.1968V27.0163ZM20.1968 27.0163V15.4754H22.1968V27.0163H20.1968ZM13.8033 27.0163H20.1968V29.0163H13.8033V27.0163ZM13.8033 27.0163H11.8033V15.4754H13.8033V27.0163ZM11.8033 27.0163V29.0163H5.40987V27.0163H11.8033ZM17 11.1803C15.2889 11.1803 13.9017 9.79309 13.9017 8.08191C13.9017 6.37073 15.2889 4.98355 17 4.98355C18.7112 4.98355 20.0984 6.37073 20.0984 8.08191C20.0984 9.79309 18.7112 11.1803 17 11.1803ZM18.0984 8.08191C18.0984 8.68852 17.6066 9.18027 17 9.18027C16.3934 9.18027 15.9017 8.68852 15.9017 8.08191C15.9017 7.4753 16.3934 6.98355 17 6.98355C17.6066 6.98355 18.0984 7.4753 18.0984 8.08191Z" fill="white"/>
+                                </mask>
+                                <g mask="url(#mask0)">
+                                    <rect x="-45" y="-48" width="130" height="133" fill="#D1D1D1"/>
+                                </g>
+                            </svg>
+
+                            <v-card-actions>
+                                <v-spacer></v-spacer>
+                                <v-btn icon>
+                                    <v-icon>favorite</v-icon>
+                                </v-btn>
+                                <v-btn icon>
+                                    <v-icon>bookmark</v-icon>
+                                </v-btn>
+                                <v-btn icon>
+                                    <v-icon>share</v-icon>
+                                </v-btn>
+                            </v-card-actions>
+                        </v-card>
+                    </v-flex>
+
+                    <v-flex xs6>
+                        <v-card>
+                            <img
+                                    src="@/assets/CreditCard.png"
+                                    height="34px"
+                                    width="34px"/>
+                            <v-card-actions>
+                                <v-spacer></v-spacer>
+                                <v-btn icon>
+                                    <span>favorite</span>
+                                </v-btn>
+                                <v-btn icon>
+                                    <v-icon>bookmark</v-icon>
+                                </v-btn>
+                                <v-btn icon>
+                                    <v-icon>share</v-icon>
+                                </v-btn>
+                            </v-card-actions>
+                        </v-card>
+                    </v-flex>
+                </v-layout>
+            </v-container>
             <v-layout row wrap>
                 <v-text-field clearable
                               name="from" label="von"></v-text-field>
-            </v-layout>
-            <v-layout row wrap>
-                <v-text-field clearable
-                              name="to" label="zu"></v-text-field>
             </v-layout>
             <v-layout row wrap>
                 <v-text-field clearable
@@ -15,12 +64,15 @@
             </v-layout>
             <v-layout row wrap>
                 <v-text-field clearable
-                              name="bic" label="bic"></v-text-field>
+                              name="usage" label="verwendungszweck"></v-text-field>
             </v-layout>
             <v-layout row wrap>
                 <v-text-field clearable
                               name="amount" label="betrag"></v-text-field>
             </v-layout>
+            <div xs12 class="pa-3">
+                <v-btn block color="primary" @click="routeTransactionConfirm()" round dark>Überweisen</v-btn>
+            </div>
         </v-flex>
     </v-form>
 </div>

@@ -27,6 +27,8 @@ export default class App extends Vue {
       return 'Rechnung Scannen';
     } else if (this.$route.path === '/transaction') {
       return 'Überweisung';
+    } else if (this.$route.path === '/transaction-confirm') {
+      return 'Bestätigen';
     }
   }
 

@@ -1,4 +1,9 @@
 @import '../global.scss';
+
+body {
+  background-color: white;
+}
+
 .app-header {
   height: 15%;
 }
@@ -10,6 +15,7 @@
 main, #scrolling-techniques {
   background-color: white;
 }
+
 .v-toolbar {
   background-color: white !important;
 }
@@ -22,5 +28,5 @@ main, #scrolling-techniques {
 }
 
 .v-toolbar .nav-title-text {
-  color:$primary-color;
+  color: $primary-color;
 }
