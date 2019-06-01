@@ -13,6 +13,10 @@ export default class MainPage extends Vue {
   public routeTransaction() {
     this.$router.push({name: 'transaction'});
   }
+  public routeFinance() {
+    this.$router.push({name: 'finance'});
+  }
+
   private testLog() {
     console.log('Test');
   }

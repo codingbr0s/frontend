@@ -33,6 +33,8 @@ export default class App extends Vue {
       return 'Überweisung';
     } else if (this.$route.path === '/transaction-confirm') {
       return 'Bestätigen';
+    } else if (this.$route.path === '/finance') {
+      return 'Finanzübersicht';
     }
   }
 
