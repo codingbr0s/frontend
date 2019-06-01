@@ -1,7 +1,6 @@
 export interface Invoice {
-  from?: string;
-  to?: string;
+  creditor?: string;
   iban: string,
-  usage: string
-  amount: number
+  desc: string
+  total: number
 }

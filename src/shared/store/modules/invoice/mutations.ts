@@ -8,11 +8,10 @@ export const mutations: MutationTree<InvoiceState> = {
   },
   resetInvoice(state) {
     state.invoice = {
-      from: '',
-        to: '',
+        creditor: '',
         iban: '',
-        usage: '',
-        amount: 0,
+        desc: '',
+        total: 0,
     };
   },
 };

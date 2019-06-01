@@ -4,10 +4,9 @@ export const state = (): InvoiceState => (initialState());
 
 export const initialState = (): InvoiceState => ({
   invoice: {
-    from: '',
-    to: '',
+    creditor: '',
     iban: '',
-    usage: '',
-    amount: 0,
+    desc: '',
+    total: 0,
   },
 });

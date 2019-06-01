@@ -13,5 +13,4 @@ export default class TransactionConfirmPage extends Vue {
   public routeToOverview() {
     this.$router.push({name: 'overview'});
   }
-
 }
