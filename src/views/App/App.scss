@@ -15,7 +15,9 @@ main, #scrolling-techniques {
 }
 
 .v-toolbar .nav-back-icon {
-  padding-right: 25px !important;
+  height: 70px;
+  width: 50px;
+  cursor: pointer;
   color: $gray-color;
 }
 

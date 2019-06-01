@@ -4,8 +4,9 @@
                light
                scroll-off-screen
                scroll-target="#scrolling-techniques">
-        <v-icon class="nav-back-icon">arrow_back</v-icon>
-        <v-toolbar-title class="nav-title-text">Rechnung Scannen</v-toolbar-title>
+        <v-icon v-if="isIndexPage()" @click="showMenu()" class="nav-back-icon">menu</v-icon>
+        <v-icon v-if="!isIndexPage()" @click="goBackToIndex()" class="nav-back-icon">arrow_back</v-icon>
+        <v-toolbar-title class="nav-title-text">{{getCurrentPageTitel()}}</v-toolbar-title>
         <v-spacer></v-spacer>
     </v-toolbar>
     <div id="scrolling-techniques"
