@@ -1,3 +1,5 @@
+import {Invoice} from '../../../model/invoice';
 
-export interface AuthState {
+export interface InvoiceState {
+  invoice: Invoice | null;
 }

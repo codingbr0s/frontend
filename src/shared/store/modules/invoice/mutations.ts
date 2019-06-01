@@ -1,7 +1,13 @@
 import {MutationTree} from 'vuex';
-import {AuthState} from './types';
-import axios from 'axios';
+import {InvoiceState} from './types';
+import {initialState} from './state';
+import {Invoice} from '../../../model/invoice';
 
-export const mutations: MutationTree<AuthState> = {
-
+export const mutations: MutationTree<InvoiceState> = {
+  setInvoice(state: InvoiceState, payload: Invoice) {
+    state.invoice = payload;
+  },
+  resetInvoice(state: InvoiceState) {
+    state.invoice = null;
+  },
 };

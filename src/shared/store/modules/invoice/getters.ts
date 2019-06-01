@@ -1,7 +1,7 @@
 import {GetterTree} from 'vuex';
-import {AuthState} from './types';
 import {RootState} from '../../types';
+import {InvoiceState} from './types';
 
-export const getters: GetterTree<AuthState, RootState> = {
+export const getters: GetterTree<InvoiceState, RootState> = {
 
 };

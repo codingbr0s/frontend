@@ -1,7 +1,13 @@
-import {AuthState} from './types';
+import {InvoiceState} from './types';
 
-export const state = (): AuthState => (initialState());
+export const state = (): InvoiceState => (initialState());
 
-export const initialState = (): AuthState => ({
-
+export const initialState = (): InvoiceState => ({
+  invoice: {
+    from: '',
+    to: '',
+    iban: '',
+    usage: '',
+    amount: 0,
+  },
 });
