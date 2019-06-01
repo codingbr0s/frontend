@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Vuex, {ActionTree, GetterTree, MutationTree, StoreOptions} from 'vuex';
 import {transaction} from './modules/transaction';
+import {category} from './modules/category';
 import {RootState} from './types';
 
 Vue.use(Vuex);
@@ -23,6 +24,7 @@ const storeOptions: StoreOptions<RootState> = {
   actions,
   modules: {
     transaction,
+    category,
   },
 };
 

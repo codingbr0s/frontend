@@ -1,17 +1,31 @@
 import {MutationTree} from 'vuex';
 import {TransactionState} from './types';
-import {Transaction} from '../../../model/transaction';
+import {Payment} from '../../../model/payment';
 
 export const mutations: MutationTree<TransactionState> = {
-  setTransaction(state: TransactionState, payload: Transaction) {
+  setPayment(state: TransactionState, payload: Payment) {
+    state.payment = payload;
+  },
+  setTransaction(state: TransactionState, payload: any) {
     state.transaction = payload;
   },
-  resetTransaction(state) {
-    state.transaction = {
-        creditor: '',
-        iban: '',
-        desc: '',
-        total: 0,
+  setExpenses(state: TransactionState, payload: any) {
+    state.expenses = payload;
+  },
+  setIncome(state: TransactionState, payload: any) {
+    state.income = payload;
+  },
+  resetPayment(state) {
+    state.payment = {
+      creditor: '',
+      iban: '',
+      desc: '',
+      amount: 0,
+      displayamount: '0,00 €',
     };
+  },
+  resetExpensesIncome(state) {
+    state.expenses = null;
+    state.income = null;
   },
 };

@@ -8,7 +8,7 @@ const TransactionModule = namespace('transaction');
   components: {'upload-btn': UploadButton},
 })
 export default class UploadPage extends Vue {
-  @TransactionModule.Action('evaluateTransaction') public evaluateTransaction: any;
+  @TransactionModule.Action('evaluatePayment') public evaluatePayment: any;
 
   private async uploadTransaction(file: File) {
     const formData: FormData = new FormData();
@@ -17,8 +17,8 @@ export default class UploadPage extends Vue {
     const uploadButton = this.$refs.uploadButton as any;
     (document.getElementById(`${uploadButton._uid}uploadFile`) as any).value = '';
     uploadButton.uTitle = null;
-    this.evaluateTransaction(formData).then((result: any) => {
-      this.$router.push({name: 'transaction', params: {transactionInput: result}});
+    this.evaluatePayment(formData).then((result: any) => {
+      this.$router.push({name: 'transaction', params: {paymentInput: result.data}});
     }).catch((error: any) => {
       console.log('Beim verarbeiten der Daten ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.');
     });
