@@ -1,12 +1,19 @@
 .main-item {
-  height: 100px;
+  height: 150px;
+  margin-bottom: 10px;
 }
 
 .text-category {
   font-weight: bold;
   color: #16264d;
+  font-size: 1.16em;
 }
-.text-information{
+
+.text-information {
   color: #979797;
-  font-size: 0.9em;
+  font-size: 1.1em;
+}
+
+.menu-headline {
+  margin: 10px 0 10px 0;
 }
