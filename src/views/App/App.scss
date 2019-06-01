@@ -1,3 +1,24 @@
+@import '../global.scss';
 .app-header {
   height: 15%;
+}
+
+.v-btn--round, .v-btn--round:after {
+  border-radius: 10px !important;
+}
+
+main, #scrolling-techniques {
+  background-color: white;
+}
+.v-toolbar {
+  background-color: white !important;
+}
+
+.v-toolbar .nav-back-icon {
+  padding-right: 25px !important;
+  color: $gray-color;
+}
+
+.v-toolbar .nav-title-text {
+  color:$primary-color;
 }
