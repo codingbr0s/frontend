@@ -7,7 +7,7 @@ const TransactionModule = namespace('transaction');
   components: {},
 })
 export default class App extends Vue {
-  @TransactionModule.Action('resetTransaction') public actionResetTransaction: any;
+  @TransactionModule.Action('resetPayment') public actionResetPayment: any;
 
   public isIndexPage() {
     if (this.$route.path === '/') {
@@ -41,7 +41,7 @@ export default class App extends Vue {
   @Watch('$route')
   private onRouteChange(to: any, from: any) {
     if (from.name === 'transaction') {
-      this.actionResetTransaction();
+      this.actionResetPayment();
     }
   }
 

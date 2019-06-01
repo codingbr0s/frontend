@@ -17,6 +17,12 @@ export const actions: ActionTree<TransactionState, RootState> = {
   async createTransaction({commit, dispatch}, payload: any) {
     return defaultBackendTransaction.createTransaction(payload);
   },
+  async getExpenses({commit, dispatch}) {
+    return defaultBackendTransaction.getExpenses();
+  },
+  async getIncome({commit, dispatch}) {
+    return defaultBackendTransaction.getIncome();
+  },
   setTransaction({commit, dispatch}, payload: any) {
     try {
       commit('setTransaction', payload);
@@ -24,7 +30,10 @@ export const actions: ActionTree<TransactionState, RootState> = {
       console.log(e);
     }
   },
-  resetTransaction({commit, dispatch}) {
-    commit('resetTransaction');
+  resetPayment({commit, dispatch}) {
+    commit('resetPayment');
+  },
+  resetExpensesIncome({commit, dispatch}) {
+    commit('resetExpensesIncome');
   },
 };
