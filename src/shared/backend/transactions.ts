@@ -14,15 +14,15 @@ export const defaultBackendTransaction: BackendTransaction = ({
         return instance.post<any>('http://10.0.7.53:3000/api/upload', image);
     },
     createTransaction(transaction: any): AxiosPromise<any> {
-        return instance.post<any>('http://10.0.7.53:3000/api/transaction', transaction);
+        return instance.post<any>('http://10.0.7.53:3000/api/transactions', transaction);
     },
     getTransaction(id: any): AxiosPromise<any> {
-        return instance.post<any>('http://10.0.7.53:3000/api/transaction/expenses', id);
+        return instance.get<any>('http://10.0.7.53:3000/api/transactions/expenses', id);
     },
     getExpenses(): AxiosPromise<any> {
-        return instance.post<any>('http://10.0.7.53:3000/api/transaction/expenses');
+        return instance.get<any>('http://10.0.7.53:3000/api/transactions/expenses');
     },
     getIncome(): AxiosPromise<any> {
-        return instance.post<any>('http://10.0.7.53:3000/api/transaction/income');
+        return instance.get<any>('http://10.0.7.53:3000/api/transactions/income');
     },
 });

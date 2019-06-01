@@ -38,7 +38,7 @@ export default class TransactionPage extends Vue {
 
   public routeTransactionConfirm() {
     this.actionCreateTransaction(this.statePayment).then((result: any) => {
-      this.$router.push({name: 'transactionConfirm'});
+      this.$router.push({name: 'transactionConfirm', params: {transactionInput: result.data}});
     }).catch((error: any) => {
       console.log('Es gab einen Fehler beim Überweisen. Bitte versuchen Sie es erneut');
     });

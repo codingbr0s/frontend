@@ -34,6 +34,7 @@ export default new Router({
       path: '/transaction-confirm',
       name: 'transactionConfirm',
       component: TransactionConfirmPage,
+      props: true,
     },
     {
       path: '/finance',
