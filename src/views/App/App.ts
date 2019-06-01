@@ -25,6 +25,8 @@ export default class App extends Vue {
       return 'apoBanking';
     } else if (this.$route.path === '/upload') {
       return 'Rechnung Scannen';
+    } else if (this.$route.path === '/transaction') {
+      return 'Überweisung';
     }
   }
 

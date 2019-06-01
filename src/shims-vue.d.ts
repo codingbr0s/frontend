@@ -4,3 +4,4 @@ declare module '*.vue' {
 }
 
 declare module 'vuetify-upload-button';
+declare module 'v-money';
