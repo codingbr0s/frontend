@@ -3,9 +3,9 @@ import {Component, Vue} from 'vue-property-decorator';
 @Component({
   components: {},
 })
-export default class Login extends Vue {
+export default class MainPage extends Vue {
 
-  public testlog() {
+  private testLog() {
     console.log('Test');
   }
 
