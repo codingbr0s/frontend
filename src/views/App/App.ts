@@ -13,7 +13,7 @@ export default class App extends Vue {
   }
 
   public goBackToIndex() {
-    this.$router.go(-1);
+    this.$router.push({name: 'main'});
   }
 
   public showMenu() {
