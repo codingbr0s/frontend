@@ -83,13 +83,19 @@
     <v-container>
         <v-layout row wrap>
             <v-flex xs12>
+                <div xs6><span>Du hast </span> <span>X EUR an</span> <span> Lisa </span>  <span>überwiesen</span> </div>
+                <div xs6><span>IBAN</span> <span class="highlight-text"> DE1233</span></div>
+            </v-flex>
+        </v-layout>
+        <v-layout row wrap>
+            <v-flex xs12>
                 <div class="pl-3 pr-3 pt-1 pb-1">
                     <v-btn block color="primary" @click="routeToUpload()" round dark>Noch eine ?</v-btn>
                 </div>
             </v-flex>
             <v-flex xs12>
                 <div  class="pl-3 pr-3 pt-1 pb-1">
-                    <v-btn block color="primary" @click="routeToOverview()" round dark>Fertig</v-btn>
+                    <v-btn block color="primary" @click="routeToFinance()" round dark>Fertig</v-btn>
                 </div>
             </v-flex>
         </v-layout>
