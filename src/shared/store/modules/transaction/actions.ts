@@ -8,8 +8,8 @@ export const actions: ActionTree<TransactionState, RootState> = {
    * Evaluate Transaction
    * Post with base64 image string
    */
-  async evaluateTransaction({commit, dispatch}, payload: any) {
-    return defaultBackendTransaction.evaluateTransaction(payload);
+  async evaluatePayment({commit, dispatch}, payload: any) {
+    return defaultBackendTransaction.evaluatePayment(payload);
   },
   /**
    * Create Transaction

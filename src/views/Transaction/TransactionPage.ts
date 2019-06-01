@@ -1,6 +1,5 @@
 import {Component, Prop, Vue, Watch} from 'vue-property-decorator';
-import {Transaction} from '../../shared/model/transaction';
-import {transaction} from '../../shared/store/modules/transaction';
+import {Payment} from '../../shared/model/payment';
 import {namespace} from 'vuex-class';
 import {VMoney} from 'v-money';
 
@@ -12,11 +11,11 @@ const TransactionModule = namespace('transaction');
 })
 export default class TransactionPage extends Vue {
 
-  get transaction(): Transaction {
-    return this.stateTransaction;
+  get payment(): Payment {
+    return this.statePayment;
   }
-  @TransactionModule.State('transaction') public stateTransaction!: any;
-  @TransactionModule.Action('setTransaction') public actionSetTransaction!: any;
+  @TransactionModule.State('payment') public statePayment!: any;
+  @TransactionModule.Action('setTransaction') public actionSetPayment!: any;
   @TransactionModule.Action('createTransaction') public actionCreateTransaction!: any;
 
   public cards = [
@@ -24,8 +23,10 @@ export default class TransactionPage extends Vue {
     {title: 'Best airlines', src: 'https://cdn.vuetifyjs.com/images/cards/plane.jpg'},
   ];
 
+  private debugPayload: any = null;
+
   @Prop(Object)
-  private transactionInput?: Transaction;
+  private paymentInput?: Payment;
 
   private money: any = {
     decimal: ',',
@@ -36,7 +37,7 @@ export default class TransactionPage extends Vue {
     masked: false /* doesn't work with directive */};
 
   public routeTransactionConfirm() {
-    this.actionCreateTransaction(this.stateTransaction).then((result: any) => {
+    this.actionCreateTransaction(this.statePayment).then((result: any) => {
       this.$router.push({name: 'transactionConfirm'});
     }).catch((error: any) => {
       console.log('Es gab einen Fehler beim Überweisen. Bitte versuchen Sie es erneut');
@@ -44,8 +45,9 @@ export default class TransactionPage extends Vue {
   }
 
   private mounted() {
-    if (this.transactionInput !== undefined && this.transactionInput !== null) {
-      this.actionSetTransaction(this.transactionInput);
+    if (this.paymentInput !== undefined && this.paymentInput !== null) {
+      this.debugPayload = this.paymentInput;
+      this.actionSetPayment(this.paymentInput);
     }
   }
 }

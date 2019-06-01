@@ -1,5 +1,5 @@
-import {Transaction} from '../../../model/transaction';
+import {Payment} from '../../../model/payment';
 
 export interface TransactionState {
-  transaction: Transaction | null;
+  payment: Payment | null;
 }

@@ -56,23 +56,24 @@
                 </v-layout>
             </v-container>
             <v-layout row wrap>
-                <v-text-field clearable v-model="transaction.creditor"
+                <v-text-field clearable v-model="payment.creditor"
                               name="recipient" label="Empfänger"></v-text-field>
             </v-layout>
             <v-layout row wrap>
-                <v-text-field clearable v-model="transaction.iban"
+                <v-text-field clearable v-model="payment.iban"
                               name="iban" label="IBAN"></v-text-field>
             </v-layout>
             <v-layout row wrap>
-                <v-text-field clearable v-model="transaction.desc"
+                <v-text-field clearable v-model="payment.desc"
                               name="description" label="Verwendungszweck"></v-text-field>
             </v-layout>
             <v-layout row wrap>
-                <v-text-field clearable v-money="money" v-model.lazy="transaction.total" type="tel"
-                              name="total" label="Betrag"></v-text-field>
+                <v-text-field clearable  v-model.lazy="payment.displayamount" type="tel"
+                              name="amount" label="Betrag"></v-text-field>
             </v-layout>
             <div xs12 class="pa-3">
                 <v-btn block color="primary" @click="routeTransactionConfirm()" round dark>Überweisen</v-btn>
+                <span :v-show="debugPayload !== null">{{debugPayload}}</span>
             </div>
         </v-flex>
     </v-form>

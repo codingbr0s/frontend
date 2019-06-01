@@ -3,10 +3,11 @@ import {TransactionState} from './types';
 export const state = (): TransactionState => (initialState());
 
 export const initialState = (): TransactionState => ({
-  transaction: {
+  payment: {
     creditor: '',
     iban: '',
     desc: '',
-    total: 0,
+    amount: 0,
+    displayamount: '0,00 €',
   },
 });
