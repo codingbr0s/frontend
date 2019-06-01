@@ -17,6 +17,7 @@ export default class TransactionPage extends Vue {
   }
   @InvoiceModule.State('invoice') public stateInvoice!: any;
   @InvoiceModule.Action('setInvoice') public actionSetInvoice!: any;
+  @InvoiceModule.Action('createInvoice') public actionCreateInvoice!: any;
 
   public cards = [
     {title: 'Favorite road trips', src: 'https://cdn.vuetifyjs.com/images/cards/road.jpg'},
@@ -35,7 +36,11 @@ export default class TransactionPage extends Vue {
     masked: false /* doesn't work with directive */};
 
   public routeTransactionConfirm() {
-    this.$router.push({name: 'transactionConfirm'});
+    this.actionCreateInvoice(this.stateInvoice).then((result: any) => {
+      this.$router.push({name: 'transactionConfirm'});
+    }).catch((error: any) => {
+      console.log('Es gab einen Fehler beim Überweisen. Bitte versuchen Sie es erneut');
+    });
   }
 
   private mounted() {

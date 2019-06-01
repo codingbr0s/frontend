@@ -8,7 +8,7 @@ const invoiceModule = namespace('invoice');
   components: {'upload-btn': UploadButton},
 })
 export default class UploadPage extends Vue {
-  @invoiceModule.Action('createInvoice') public createInvoice: any;
+  @invoiceModule.Action('evaluateInvoice') public evaluateInvoice: any;
 
   private async uploadInvoice(file: File) {
     const formData: FormData = new FormData();
@@ -17,7 +17,7 @@ export default class UploadPage extends Vue {
     const uploadButton = this.$refs.uploadButton as any;
     (document.getElementById(`${uploadButton._uid}uploadFile`) as any).value = '';
     uploadButton.uTitle = null;
-    this.createInvoice(formData).then((result: any) => {
+    this.evaluateInvoice(formData).then((result: any) => {
       this.$router.push({name: 'transaction', params: {invoiceInput: result}});
     }).catch((error: any) => {
       console.log('Beim verarbeiten der Daten ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.');

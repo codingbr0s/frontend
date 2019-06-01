@@ -1,6 +1,5 @@
 import {MutationTree} from 'vuex';
 import {InvoiceState} from './types';
-import {initialState} from './state';
 import {Invoice} from '../../../model/invoice';
 
 export const mutations: MutationTree<InvoiceState> = {

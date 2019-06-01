@@ -5,8 +5,14 @@ import {InvoiceState} from './types';
 
 export const actions: ActionTree<InvoiceState, RootState> = {
   /**
-   * Create Invoice
+   * Evaluate Invoice
    * Post with base64 image string
+   */
+  async evaluateInvoice({commit, dispatch}, payload: any) {
+    return defaultBackendInvoice.evaluateInvoice(payload);
+  },
+  /**
+   * Create Invoice
    */
   async createInvoice({commit, dispatch}, payload: any) {
     return defaultBackendInvoice.createInvoice(payload);
