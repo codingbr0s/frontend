@@ -10,4 +10,8 @@ export default class TransactionConfirmPage extends Vue {
     this.$router.push({name: 'upload'});
   }
 
+  public routeToOverview() {
+    this.$router.push({name: 'overview'});
+  }
+
 }
