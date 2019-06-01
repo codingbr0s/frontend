@@ -1,0 +1,52 @@
+.main-item {
+  margin-bottom: 20px;
+}
+
+.transaction-title {
+  color: #16264d;
+  font-weight: bold;
+  font-size: 1.5em;
+  margin: 8px 0px 0 10px;
+}
+
+
+.transaction-status {
+  font-style: italic;
+
+  .status-error {
+    color: #b71c1c;
+  }
+
+  .status-warning {
+    color: #FFC71B;
+  }
+}
+
+.transaction-amount {
+  font-weight: bold;
+  font-size: 1.5em;
+  margin: 8px 0px 0 0px;
+
+  &.success-state {
+    color: #8cbe32;
+  }
+
+  &.failure-state {
+    color: #b71c1c;
+  }
+}
+.transaction-subcat-container{
+  margin-left: 10px;
+  margin-top: 5px;
+  .transaction-subcat{
+    margin-bottom: 2px;
+  }
+  .transaction-subcat-title{
+    font-weight: bold;
+  }
+  .transaction-warning-chip{
+    background: #FFC71B !important;
+    height: 20px !important;
+    vertical-align: baseline !important;
+  }
+}

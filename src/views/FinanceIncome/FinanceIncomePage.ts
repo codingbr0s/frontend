@@ -4,7 +4,7 @@ import {Component, Prop, Vue, Watch} from 'vue-property-decorator';
   components: {},
   directives: {},
 })
-export default class FinancePage extends Vue {
+export default class FinanceIncomePage extends Vue {
   public routeIncome() {
     this.$router.push({name: 'financeIncome'});
   }

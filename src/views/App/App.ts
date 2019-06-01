@@ -35,6 +35,8 @@ export default class App extends Vue {
       return 'Wie soll es weiter gehen';
     } else if (this.$route.path === '/finance') {
       return 'Finanzübersicht';
+    } else if (this.$route.path === '/finance-income') {
+      return 'Ihre Einnahmen';
     }
   }
 
