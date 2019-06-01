@@ -1,3 +1,19 @@
+@import '../global.scss';
 .v-btn--round, .v-btn--round:after {
   border-radius: 10px !important;
+}
+
+.account.selected {
+  background-color: #5E76FA!important;
+  border-radius: 10px;
+  .text--white{
+    color:white;
+  }
+}
+.account {
+  background-color: #fff!important;
+  border-radius: 10px;
+  .text--white{
+    color:black;
+  }
 }
