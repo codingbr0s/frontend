@@ -43,7 +43,7 @@
                     <v-flex xs4 class="transaction-title">Einnahmen</v-flex>
                     <v-spacer></v-spacer>
                     <v-flex xs4 class=" right transaction-amount success-state">31.330,22 €</v-flex>
-                    
+
                 </v-layout>
 
                 <v-layout row>
@@ -56,13 +56,13 @@
                                 <v-flex xs4 class="right pr-3" style="text-align:right">350,00 €</v-flex>
                                 <v-flex xs12 class="transaction-category">Akupunktur</v-flex>
                         </v-layout>
-                    
+
                         <v-layout row wrap pb-1>
                                 <v-flex xs8>Bayer AG</v-flex>
                                 <v-flex xs4 class="right pr-3" style="text-align:right">595,00 €</v-flex>
                                 <v-flex xs12 class="transaction-category">Vorträge, schriftstellerische Tätigkeiten</v-flex>
                         </v-layout>
-                    
+
                         <v-layout row wrap pb-1>
                                 <v-flex xs8>Kassenvereinigung Nordrhein</v-flex>
                                 <v-flex xs4 class="right pr-3" style="text-align:right">11.546,08 €</v-flex>
@@ -101,13 +101,13 @@
                     <v-flex xs4 class="transaction-title">Ausgaben</v-flex>
                     <v-spacer></v-spacer>
                     <v-flex xs4 class=" right transaction-amount failure-state">{{expensesSum}}</v-flex>
-                    
+
                 </v-layout>
 
                 <v-layout row>
                     <v-flex xs2></v-flex>
                     <v-flex xs10 pl-2 pb-2 class="transaction-subcat-container">
-                        <div class="transaction-subcat-title" v-if="newTransactions.length>0">Letzte 3 Zahlungen</div>
+                        <div class="transaction-subcat-title">Letzte 3 Zahlungen</div>
 
                         <v-layout row wrap pb-1  v-for="(item,i) in newTransactions" :key="i">
                                 <v-flex xs8>{{item.creditor}}</v-flex>
@@ -119,6 +119,6 @@
                 </v-layout>
             </v-card>
         </v-flex>
-    </v-layout>   
+    </v-layout>
 
 </div>
