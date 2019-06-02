@@ -49,7 +49,7 @@ export default class App extends Vue {
     if (from.name === 'transaction') {
       this.actionResetPayment();
     }
-    if (from.name === 'financeExpenses' || from.name === 'financeIncome') {
+    if (from.name === 'finance' || from.name === 'financeExpenses' || from.name === 'financeIncome') {
       this.actionResetExpensesIncome();
     }
   }
