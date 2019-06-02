@@ -6,6 +6,7 @@ import TransactionPage from './views/Transaction/TransactionPage.vue';
 import TransactionConfirmPage from './views/TransactionConfirm/TransactionConfirmPage';
 import FinancePage from './views/Finance/FinancePage';
 import FinanceIncomePage from './views/FinanceIncome/FinanceIncomePage';
+import FinanceExpensesPage from './views/FinanceExpenses/FinanceExpensesPage';
 
 Vue.use(Router);
 
@@ -46,6 +47,11 @@ export default new Router({
       path: '/finance-income',
       name: 'financeIncome',
       component: FinanceIncomePage,
+    },
+    {
+      path: '/finance-expenses',
+      name: 'financeExpenses',
+      component: FinanceExpensesPage,
     },
   ],
 });
