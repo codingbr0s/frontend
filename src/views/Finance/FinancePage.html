@@ -112,7 +112,7 @@
                                 </v-flex>
                             </v-layout>
                             <v-layout row wrap>
-                                <v-flex xs12 class="transaction-subcat-container" v-if="newTransactions !== null">
+                                <v-flex xs12 class="transaction-subcat-container" v-if="newTransactions.length > 0">
                                     <div class="transaction-subcat-title">Letzten 3 Zahlungsausgänge</div>
                                     <div class="transaction-subcat" v-for="(item,i) in newTransactions"
                                          :key="i">
