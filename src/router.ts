@@ -7,6 +7,7 @@ import TransactionConfirmPage from './views/TransactionConfirm/TransactionConfir
 import FinancePage from './views/Finance/FinancePage';
 import FinanceIncomePage from './views/FinanceIncome/FinanceIncomePage';
 import FinanceExpensesPage from './views/FinanceExpenses/FinanceExpensesPage';
+import TransactionOverview from './views/TransactioOverview/TransactionOverview';
 
 Vue.use(Router);
 
@@ -36,6 +37,12 @@ export default new Router({
       path: '/transaction-confirm',
       name: 'transactionConfirm',
       component: TransactionConfirmPage,
+      props: true,
+    },
+    {
+      path: '/transaction-overview',
+      name: 'transactionOverview',
+      component: TransactionOverview,
       props: true,
     },
     {
