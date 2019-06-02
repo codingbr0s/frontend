@@ -2,12 +2,14 @@ import {Component, Vue, Watch} from 'vue-property-decorator';
 import {namespace} from 'vuex-class';
 
 const TransactionModule = namespace('transaction');
+const CategoryModule = namespace('category');
 
 @Component({
   components: {},
 })
 export default class App extends Vue {
   @TransactionModule.Action('resetPayment') public actionResetPayment: any;
+  @CategoryModule.Action('resetExpensesIncome') public actionResetExpensesIncome: any;
 
   public isIndexPage() {
     if (this.$route.path === '/') {
@@ -46,6 +48,9 @@ export default class App extends Vue {
   private onRouteChange(to: any, from: any) {
     if (from.name === 'transaction') {
       this.actionResetPayment();
+    }
+    if (from.name === 'finance' || from.name === 'financeExpenses' || from.name === 'financeIncome') {
+      this.actionResetExpensesIncome();
     }
   }
 
