@@ -25,4 +25,8 @@ export default class FinanceIncomePage extends Vue {
   public routeIncome() {
     this.$router.push({name: 'financeIncome'});
   }
+
+  public routeTransactionOverview(catid: any) {
+    this.$router.push({name: 'transactionOverview', params: {subCategoryId: catid}});
+  }
 }

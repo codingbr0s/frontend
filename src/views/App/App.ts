@@ -46,6 +46,8 @@ export default class App extends Vue {
       return 'Ihre Einnahmen';
     } else if (this.$route.path === '/finance-expenses') {
       return 'Ihre Ausgaben';
+    } else if (this.$route.path === '/transaction-overview') {
+      return 'Transaktions Übersicht';
     }
   }
 

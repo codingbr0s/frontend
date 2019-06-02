@@ -4,10 +4,10 @@ import {defaultBackendCategory} from '../../../backend/category';
 import {CategoryState} from './types';
 
 export const actions: ActionTree<CategoryState, RootState> = {
-  async getCategory({commit, dispatch}, payload: any) {
+  getCategory({commit, dispatch}, payload: any) {
     return defaultBackendCategory.getCategory(payload);
   },
-  async getSubCategory({commit, dispatch}, payload: any) {
+  getSubCategory({commit, dispatch}, payload: any) {
     return defaultBackendCategory.getSubCategory(payload);
   },
   getExpenses({commit, dispatch}) {
@@ -21,6 +21,9 @@ export const actions: ActionTree<CategoryState, RootState> = {
   },
   setCategories({commit, dispatch}, payload: any) {
     commit('setCategories', payload);
+  },
+  setSubCategory({commit, dispatch}, payload: any) {
+    commit('setSubCategory', payload);
   },
   getExpensesSum({commit, dispatch}) {
     return defaultBackendCategory.getExpensesSum();
