@@ -7,12 +7,12 @@ const CategoryModule = namespace('category');
   components: {},
 })
 export default class FinanceExpensesPage extends Vue {
-  @CategoryModule.Action('getCategories') public actionGetCategories!: any;
   @CategoryModule.Action('setCategories') public actionSetCategories!: any;
+  @CategoryModule.Action('getExpenses') public actionGetExpenses!: any;
   @CategoryModule.State('categories') public stateCategories!: any;
 
   public mounted() {
-    this.actionGetCategories().then((result: any) => {
+    this.actionGetExpenses().then((result: any) => {
       this.actionSetCategories(result.data);
     });
   }
