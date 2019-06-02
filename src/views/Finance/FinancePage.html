@@ -1,4 +1,23 @@
 <div>
+    <v-tabs fixed-tabs
+            color="transparent"
+            class="tabs-spacer">
+        <v-tabs-slider></v-tabs-slider>
+        <v-tab class="primary--text">
+            <span>Q1</span>
+        </v-tab>
+
+        <v-tab class="primary--text">
+            <span>Q2</span>
+        </v-tab>
+        <v-tab class="primary--text">
+            <span>Q3</span>
+        </v-tab>
+        <v-tab class="primary--text">
+            <span>Q4</span>
+        </v-tab>
+
+    </v-tabs>
     <v-layout row wrap>
         <v-flex xs12>
             <v-card class="main-item" @click.stop="routeIncome">
@@ -48,7 +67,7 @@
                                             <v-flex xs7>Vorträge & schr...</v-flex>
                                             <v-flex xs5 class="text-xs-right">595,00 €</v-flex>
                                         </v-layout>
-                                </div>
+                                    </div>
                                     <div class="transaction-subcat">
                                         <v-layout row wrap>
                                             <v-flex xs12>KV Nordrhein</v-flex>
