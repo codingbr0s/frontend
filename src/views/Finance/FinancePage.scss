@@ -6,7 +6,12 @@
   color: #16264d;
   font-weight: bold;
   font-size: 1.5em;
-  margin: 8px 0px 0 10px;
+  margin: 20px 0px 0 8px;
+}
+
+.transaction-category {
+  //font-style: italic;
+    font-size: .9em;
 }
 
 
@@ -25,7 +30,7 @@
 .transaction-amount {
   font-weight: bold;
   font-size: 1.5em;
-  margin: 8px 0px 0 0px;
+  margin: 20px 0px 0 0px;
 
   &.success-state {
     color: #8cbe32;
@@ -39,7 +44,7 @@
   margin-bottom: 10px;
 }
 .transaction-subcat-container{
-  margin-left: 10px;
+  margin-left: 0px;
   margin-top: 5px;
   .transaction-subcat{
     margin-bottom: 2px;
