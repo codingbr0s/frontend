@@ -7,6 +7,7 @@ export interface BackendCategory {
   getExpenses: () => AxiosPromise<any>;
   getIncome: () => AxiosPromise<any>;
   getCategories: () => AxiosPromise<any>;
+  getExpensesSum: () => AxiosPromise<any>;
 }
 
 export const defaultBackendCategory: BackendCategory = ({
@@ -24,5 +25,8 @@ export const defaultBackendCategory: BackendCategory = ({
   },
   getCategories(): AxiosPromise<any> {
     return instance.get<any>('http://10.0.7.53:3000/api/categories');
+  },
+  getExpensesSum(): AxiosPromise<any> {
+    return instance.get<any>('http://10.0.7.53:3000/api/categories/expenses/sum');
   },
 });

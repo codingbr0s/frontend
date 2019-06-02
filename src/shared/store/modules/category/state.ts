@@ -8,4 +8,5 @@ export const initialState = (): CategoryState => ({
   expenses: null,
   income: null,
   categories: [],
+  expensesSum: null,
 });

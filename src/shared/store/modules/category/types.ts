@@ -6,4 +6,5 @@ export interface CategoryState {
   expenses: any | null;
   income: any | null;
   categories: any[] | null;
+  expensesSum: string | null;
 }

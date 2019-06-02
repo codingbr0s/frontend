@@ -9,7 +9,9 @@ export const mutations: MutationTree<TransactionState> = {
   setTransaction(state: TransactionState, payload: any) {
     state.transaction = payload;
   },
-
+  setNewTransactions(state: TransactionState, payload: any) {
+    state.newTransactions = payload.transactions.splice(0, 3);
+  },
   resetPayment(state) {
     state.payment = {
       creditor: '',

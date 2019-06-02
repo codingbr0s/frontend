@@ -22,6 +22,12 @@ export const actions: ActionTree<CategoryState, RootState> = {
   setCategories({commit, dispatch}, payload: any) {
     commit('setCategories', payload);
   },
+  getExpensesSum({commit, dispatch}) {
+    return defaultBackendCategory.getExpensesSum();
+  },
+  setExpensesSum({commit, dispatch}, payload: any) {
+    commit('setExpensesSum', payload);
+  },
   resetCategories({commit, dispatch}) {
     commit('resetCategories');
   },

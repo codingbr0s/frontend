@@ -18,6 +18,9 @@ export const mutations: MutationTree<CategoryState> = {
   setCategories(state: CategoryState, payload: any) {
     state.categories = payload;
   },
+  setExpensesSum(state: CategoryState, payload: any) {
+    state.expensesSum = payload.displayamount;
+  },
   resetExpensesIncome(state) {
     state.expenses = null;
     state.income = null;
