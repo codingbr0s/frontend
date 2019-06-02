@@ -28,4 +28,8 @@ export default class FinancePage extends Vue {
   public routeIncome() {
     this.$router.push({name: 'financeIncome'});
   }
+
+  public routeExpenses() {
+    this.$router.push({name: 'financeExpenses'});
+  }
 }
