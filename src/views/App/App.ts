@@ -1,5 +1,5 @@
 import {Component, Vue, Watch} from 'vue-property-decorator';
-import {namespace} from 'vuex-class';
+import {namespace, State} from 'vuex-class';
 
 const TransactionModule = namespace('transaction');
 const CategoryModule = namespace('category');
@@ -8,8 +8,13 @@ const CategoryModule = namespace('category');
   components: {},
 })
 export default class App extends Vue {
+  @State('showProgress') public stateShowProgress: any;
   @TransactionModule.Action('resetPayment') public actionResetPayment: any;
   @CategoryModule.Action('resetExpensesIncome') public actionResetExpensesIncome: any;
+
+  get showProgress(): boolean {
+    return this.stateShowProgress;
+  }
 
   public isIndexPage() {
     if (this.$route.path === '/') {

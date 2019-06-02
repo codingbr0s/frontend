@@ -20,7 +20,6 @@ export const actions: ActionTree<TransactionState, RootState> = {
   getTransaction({commit, dispatch}, payload: any) {
     return defaultBackendTransaction.getTransaction(payload);
   },
-
   setTransaction({commit, dispatch}, payload: any) {
     try {
       commit('setTransaction', payload);

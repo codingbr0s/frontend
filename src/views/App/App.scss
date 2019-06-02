@@ -34,3 +34,10 @@ main, #scrolling-techniques {
 .v-toolbar .nav-title-text {
   color: $primary-color;
 }
+
+.progress-animation {
+  position: fixed;
+  top: 35%;
+  left: 32%;
+  z-index: 9999;
+}
