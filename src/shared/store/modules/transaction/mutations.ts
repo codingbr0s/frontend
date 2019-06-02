@@ -9,12 +9,7 @@ export const mutations: MutationTree<TransactionState> = {
   setTransaction(state: TransactionState, payload: any) {
     state.transaction = payload;
   },
-  setExpenses(state: TransactionState, payload: any) {
-    state.expenses = payload;
-  },
-  setIncome(state: TransactionState, payload: any) {
-    state.income = payload;
-  },
+
   resetPayment(state) {
     state.payment = {
       creditor: '',
@@ -23,9 +18,5 @@ export const mutations: MutationTree<TransactionState> = {
       amount: 0,
       displayamount: '0,00 €',
     };
-  },
-  resetExpensesIncome(state) {
-    state.expenses = null;
-    state.income = null;
   },
 };

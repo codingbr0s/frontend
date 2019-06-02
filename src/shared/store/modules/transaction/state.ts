@@ -11,6 +11,5 @@ export const initialState = (): TransactionState => ({
     displayamount: '0,00 €',
   },
   transaction: null,
-  expenses: null,
-  income: null,
+
 });

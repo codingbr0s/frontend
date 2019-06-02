@@ -2,33 +2,30 @@
     <v-layout row wrap>
         <v-flex xs12>
             <v-card class="main-item">
+
                 <v-expansion-panel>
                     <v-expansion-panel-content
-                            v-for="(item,i) in 5"
+                            v-for="(item,i) in categories"
                             :key="i">
                         <template v-slot:actions>
-                            <span color="error">1000,00 €</span>
+                            <span color="error">{{item.displayamount}}</span>
                             <v-icon>$vuetify.icons.expand</v-icon>
                         </template>
                         <template v-slot:header>
                             <div class="pa-2">
                                 <v-flex xs12>
-                                    <div xs12 text-sm-left><span class="text-information">Lohnkosten</span></div>
+                                    <div xs12 text-sm-left><span class="text-information">{{item.name}}</span></div>
                                 </v-flex>
                             </div>
                         </template>
-                        <v-layout row wrap class="pa-4">
-                            <v-flex xs8>
-                                Kosten
+                        <v-layout row wrap class="pa-4"
+                                  v-for="(subItem,i) in item.subcats"
+                                  :key="i">
+                            <v-flex xs8 class="pa-2">
+                                {{subItem.CategoryName}}
                             </v-flex>
-                            <v-flex xs4>
-                                100
-                            </v-flex>
-                            <v-flex xs8>
-                                Kosten
-                            </v-flex>
-                            <v-flex xs4>
-                                100
+                            <v-flex xs4 class="pa-2">
+                                {{subItem.displayamount}}
                             </v-flex>
                         </v-layout>
                     </v-expansion-panel-content>

@@ -8,24 +8,19 @@ export const actions: ActionTree<TransactionState, RootState> = {
    * Evaluate Transaction
    * Post with base64 image string
    */
-  async evaluatePayment({commit, dispatch}, payload: any) {
+  evaluatePayment({commit, dispatch}, payload: any) {
     return defaultBackendTransaction.evaluatePayment(payload);
   },
   /**
    * Create Transaction
    */
-  async createTransaction({commit, dispatch}, payload: any) {
+  createTransaction({commit, dispatch}, payload: any) {
     return defaultBackendTransaction.createTransaction(payload);
   },
-  async getTransaction({commit, dispatch}, payload: any) {
+  getTransaction({commit, dispatch}, payload: any) {
     return defaultBackendTransaction.getTransaction(payload);
   },
-  async getExpenses({commit, dispatch}) {
-    return defaultBackendTransaction.getExpenses();
-  },
-  async getIncome({commit, dispatch}) {
-    return defaultBackendTransaction.getIncome();
-  },
+
   setTransaction({commit, dispatch}, payload: any) {
     try {
       commit('setTransaction', payload);
@@ -42,8 +37,5 @@ export const actions: ActionTree<TransactionState, RootState> = {
   },
   resetPayment({commit, dispatch}) {
     commit('resetPayment');
-  },
-  resetExpensesIncome({commit, dispatch}) {
-    commit('resetExpensesIncome');
   },
 };

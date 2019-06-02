@@ -10,7 +10,22 @@ export const actions: ActionTree<CategoryState, RootState> = {
   async getSubCategory({commit, dispatch}, payload: any) {
     return defaultBackendCategory.getSubCategory(payload);
   },
+  getExpenses({commit, dispatch}) {
+    return defaultBackendCategory.getExpenses();
+  },
+  getIncome({commit, dispatch}) {
+    return defaultBackendCategory.getIncome();
+  },
+  getCategories({commit, dispatch}) {
+    return defaultBackendCategory.getCategories();
+  },
+  setCategories({commit, dispatch}, payload: any) {
+    commit('setCategories', payload);
+  },
   resetCategories({commit, dispatch}) {
     commit('resetCategories');
+  },
+  resetExpensesIncome({commit, dispatch}) {
+    commit('resetExpensesIncome');
   },
 };
